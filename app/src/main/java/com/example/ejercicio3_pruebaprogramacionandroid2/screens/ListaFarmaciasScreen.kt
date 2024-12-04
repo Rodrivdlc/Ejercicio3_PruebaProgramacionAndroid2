@@ -52,8 +52,7 @@ fun ListaFarmaciasScreen(onFarmaciaClick: (Farmacia) -> Unit = {}) {
 fun navigateToMapaActivity(context: Context, farmacia: Farmacia) {
     val intent = Intent(context, MapaActivity::class.java).apply {
         putExtra("nombre", farmacia.nombre)
-        putExtra("latitud", farmacia.latitud)
-        putExtra("longitud", farmacia.longitud)
+        putExtra("telefono", farmacia.telefono)
     }
     context.startActivity(intent)
 }
