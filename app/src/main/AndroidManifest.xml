@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso para acceso a Internet -->
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejercicio3_PruebaProgramacionAndroid2"
         tools:targetApi="31">
+
+        <!-- Clave de la API de Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="key" />         <!-- poner aqui la key del google maps -->
+
+        <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -22,10 +29,16 @@
             android:theme="@style/Theme.Ejercicio3_PruebaProgramacionAndroid2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- MapaActivity -->
+        <activity
+            android:name=".activity.MapaActivity"
+            android:exported="true"
+            android:label="@string/mapa_activity_title"
+            android:theme="@style/Theme.Ejercicio3_PruebaProgramacionAndroid2" />
     </application>
 
 </manifest>
