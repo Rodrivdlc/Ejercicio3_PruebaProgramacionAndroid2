@@ -53,6 +53,8 @@ fun navigateToMapaActivity(context: Context, farmacia: Farmacia) {
     val intent = Intent(context, MapaActivity::class.java).apply {
         putExtra("nombre", farmacia.nombre)
         putExtra("telefono", farmacia.telefono)
+        putExtra("latitud", farmacia.latitud)
+        putExtra("longitud", farmacia.longitud)
     }
     context.startActivity(intent)
 }
